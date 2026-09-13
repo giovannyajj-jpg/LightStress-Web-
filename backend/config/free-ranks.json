@@ -1,0 +1,14 @@
+[
+  {
+    "id": "free",
+    "name": "FREE",
+    "description": "El rango base para todos los jugadores nuevos.",
+    "howToGet": "Se obtiene automáticamente al unirte al servidor."
+  },
+  {
+    "id": "killer-free",
+    "name": "KILLER",
+    "description": "Rango de combate obtenido por mérito dentro del servidor.",
+    "howToGet": "Gánalo participando activamente en eventos PvP."
+  }
+]

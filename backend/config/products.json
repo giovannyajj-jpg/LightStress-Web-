@@ -1,0 +1,77 @@
+[
+  {
+    "id": "vip",
+    "category": "VIP",
+    "icon": "👑",
+    "name": "VIP",
+    "description": "Obtén beneficios exclusivos dentro del servidor.",
+    "price": "$5.00",
+    "benefits": [
+      "Prefijo VIP en el chat",
+      "Kit de bienvenida exclusivo",
+      "Acceso a zonas VIP"
+    ],
+    "image": "/assets/ranks/vip.png",
+    "buttonLabel": "COMPRAR"
+  },
+  {
+    "id": "mvp",
+    "category": "MVP",
+    "icon": "⭐",
+    "name": "MVP",
+    "description": "Sube de nivel y desbloquea ventajas.",
+    "price": "$10.00",
+    "benefits": [
+      "Todo lo de VIP",
+      "Doble de recompensas diarias",
+      "Comandos adicionales"
+    ],
+    "image": "/assets/ranks/mvp.png",
+    "buttonLabel": "COMPRAR"
+  },
+  {
+    "id": "killer",
+    "category": "KILLER",
+    "icon": "🔥",
+    "name": "KILLER",
+    "description": "El rango para los jugadores más agresivos.",
+    "price": "$15.00",
+    "benefits": [
+      "Todo lo de MVP",
+      "Efectos especiales en combate",
+      "Acceso prioritario a eventos PvP"
+    ],
+    "image": "/assets/ranks/killer.png",
+    "buttonLabel": "COMPRAR"
+  },
+  {
+    "id": "millonario",
+    "category": "MILLONARIO",
+    "icon": "💰",
+    "name": "MILLONARIO",
+    "description": "Demuestra quién manda.",
+    "price": "$25.00",
+    "benefits": [
+      "Todo lo de KILLER",
+      "Rango máximo del servidor",
+      "Beneficios económicos exclusivos"
+    ],
+    "image": "/assets/ranks/millonario.png",
+    "buttonLabel": "COMPRAR"
+  },
+  {
+    "id": "items",
+    "category": "ITEMS",
+    "icon": "🎁",
+    "name": "ITEMS",
+    "description": "Items exclusivos para mejorar tu experiencia.",
+    "price": "Desde $1.00",
+    "benefits": [
+      "Kits especiales",
+      "Cosméticos exclusivos",
+      "Objetos únicos de temporada"
+    ],
+    "image": "/assets/ranks/items.png",
+    "buttonLabel": "VER ITEMS"
+  }
+]

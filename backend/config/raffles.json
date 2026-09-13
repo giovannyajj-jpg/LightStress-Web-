@@ -1,0 +1,10 @@
+[
+  {
+    "id": "sorteo-vip",
+    "prize": "Rango VIP gratis por 1 mes",
+    "date": "2026-10-05",
+    "participants": 0,
+    "status": "Activo",
+    "participateVia": "discord"
+  }
+]
