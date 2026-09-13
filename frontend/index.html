@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LightStress â€” Servidor Minecraft Bedrock</title>
+<meta name="description" content="LightStress, servidor de Minecraft Bedrock. Ãšnete ahora en LightStress.xyz:19132" />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="bg-field" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__brand">
+      <img src="assets/logo.png" alt="LightStress" class="navbar__logo" />
+      <span>LightStress</span>
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home">Inicio</a>
+      <a href="#servidor">Servidor</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#sorteos">Sorteos</a>
+      <a href="#discord" class="navbar__cta">Discord</a>
+    </nav>
+
+    <button class="navbar__burger" id="navBurger" aria-label="Abrir menÃº">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__content">
+      <img src="assets/logo.png" alt="LightStress" class="hero__logo" />
+      <h1 class="hero__title">LIGHTSTRESS</h1>
+      <p class="hero__tagline">Tu prÃ³xima experiencia comienza aquÃ­.</p>
+
+      <div class="hero__status" id="heroStatus">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">Consultando servidorâ€¦</span>
+      </div>
+
+      <div class="hero__ip">LightStress.xyz:19132</div>
+
+      <div class="hero__actions">
+        <a href="#servidor" class="btn btn--primary">Jugar ahora</a>
+        <a href="#servidor" class="btn btn--ghost">Ver servidor</a>
+        <a href="https://discord.gg/8azZTpFVkq" target="_blank" rel="noopener" class="btn btn--discord">Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIDOR: STATUS + JUGADORES + INFO -->
+  <section class="section" id="servidor">
+    <h2 class="section__title">Estado del servidor</h2>
+    <p class="section__subtitle">Datos reales, consultados directamente al servidor. Se actualizan solos.</p>
+
+    <div class="status-grid">
+      <div class="glass-card status-card">
+        <div class="status-card__header">
+          <span class="status-dot" id="statusDot2"></span>
+          <span id="statusText2">Consultandoâ€¦</span>
+        </div>
+        <div class="status-card__players" id="playerCount">â€” / â€”</div>
+        <div class="status-card__label">jugadores conectados</div>
+        <div class="status-card__updated" id="lastUpdated">Ãšltima actualizaciÃ³n: â€”</div>
+      </div>
+
+      <div class="glass-card players-card">
+        <h3>Jugadores conectados</h3>
+        <p id="playersMessage" class="players-message">Consultando servidorâ€¦</p>
+        <p class="players-note">
+          Por el momento solo mostramos la cantidad de jugadores conectados.
+          Los nombres en tiempo real llegarÃ¡n en una prÃ³xima actualizaciÃ³n.
+        </p>
+      </div>
+
+      <div class="glass-card info-card">
+        <h3>InformaciÃ³n del servidor</h3>
+        <dl class="info-list">
+          <div><dt>IP</dt><dd>LightStress.xyz</dd></div>
+          <div><dt>Puerto</dt><dd>19132</dd></div>
+          <div><dt>EdiciÃ³n</dt><dd>Minecraft Bedrock</dd></div>
+          <div><dt>Jugadores</dt><dd id="infoPlayers">â€” / â€”</dd></div>
+        </dl>
+        <button class="btn btn--primary btn--full" id="copyIpBtn">Copiar IP</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIENDA -->
+  <section class="section" id="tienda">
+    <h2 class="section__title">Tienda LightStress</h2>
+    <p class="section__subtitle">Rangos e items exclusivos para tu experiencia dentro del servidor.</p>
+    <div class="cards-grid" id="shopGrid">
+      <!-- generado por JS desde /api/products -->
+    </div>
+  </section>
+
+  <!-- RANGOS FREE -->
+  <section class="section" id="rangos-free">
+    <h2 class="section__title">Rangos gratuitos</h2>
+    <p class="section__subtitle">Rangos que puedes conseguir sin gastar nada.</p>
+    <div class="cards-grid cards-grid--free" id="freeRanksGrid">
+      <!-- generado por JS desde /api/free-ranks -->
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="section" id="eventos">
+    <h2 class="section__title">PrÃ³ximos eventos</h2>
+    <div class="cards-grid" id="eventsGrid">
+      <!-- generado por JS desde /api/events -->
+    </div>
+  </section>
+
+  <!-- SORTEOS -->
+  <section class="section" id="sorteos">
+    <h2 class="section__title">Sorteos</h2>
+    <div class="cards-grid" id="rafflesGrid">
+      <!-- generado por JS desde /api/raffles -->
+    </div>
+  </section>
+
+  <!-- DISCORD -->
+  <section class="section discord-section" id="discord">
+    <div class="glass-card discord-card">
+      <h2>Ãšnete a nuestra comunidad</h2>
+      <p>Habla con otros jugadores, participa en sorteos, recibe novedades y mantente conectado con LightStress.</p>
+      <a href="https://discord.gg/8azZTpFVkq" target="_blank" rel="noopener" class="btn btn--discord btn--lg">Unirme al Discord</a>
+    </div>
+  </section>
+
+  <!-- STAFF -->
+  <section class="section" id="equipo">
+    <h2 class="section__title">Equipo</h2>
+    <div class="glass-card staff-card">
+      <div class="staff-avatar" aria-hidden="true">ðŸ§Š</div>
+      <div>
+        <div class="staff-role">Fundador</div>
+        <div class="staff-name">Astrx</div>
+        <div class="staff-discord">Discord: @Astrmp</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="LightStress" />
+      <span>LightStress</span>
+    </div>
+    <p class="footer__tagline">Una nueva experiencia comienza aquÃ­.</p>
+
+    <div class="footer__grid">
+      <div>
+        <strong>IP</strong>
+        <span>LightStress.xyz:19132</span>
+      </div>
+      <div>
+        <strong>Discord</strong>
+        <a href="https://discord.gg/8azZTpFVkq" target="_blank" rel="noopener">discord.gg/8azZTpFVkq</a>
+      </div>
+      <div>
+        <strong>Fundador</strong>
+        <span>Astrx (@Astrmp)</span>
+      </div>
+    </div>
+
+    <p class="footer__copyright">Â© 2026 LightStress. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
